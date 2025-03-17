@@ -1,10 +1,12 @@
 # SEO
-SEO Przewodnik dla początkujących.
+
+SEO Przewodnik dla początkujących.
 
 ## Linki
 
 ```sh
 https://ogp.me
+https://developer.x.com/en/docs/x-for-websites/cards/overview/markup
 https://schema.org/Article
 https://schema.org/AboutPage
 https://schema.org/ContactPage
@@ -17,6 +19,92 @@ https://developers.google.com/search/docs/appearance/structured-data/article?hl=
 https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=pl
 https://pagespeed.web.dev/
 https://search.google.com/test/rich-results
+```
+
+## Title
+
+```html
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Short description goes here." />
+<meta name="keywords" content="one, two" />
+<title>Example: Short title goes here | Web Developer</title>
+<link rel="canonical" href="https://example.com/" />
+
+<!-- Allow bots -->
+<meta name="robots" content="index, follow" />
+
+<!-- Remove from goole -->
+<meta name="googlebot" content="noindex, nofollow" />
+```
+
+## Favicon, geo
+
+```html
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+
+<link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+
+<meta name="geo.position" content="53.017850;20.904640" />
+<meta name="geo.placename" content="Warszawa" />
+```
+
+## Schema org
+
+```html
+<!-- OpenGraph -->
+<meta property="og:url" content="https://example.com" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Example.com" />
+<meta property="og:title" content="Strony internetowe Warszawa" />
+<meta property="og:description" content="Tworzenie stron internetowych i sklepów internetowych, kodowanie stron produktów oraz szablonów e-mail newslettera w HTML, projektowanie logo, administracja serwerami VPS i hostingiem, identyfikacja wizualna, modelowanie 3D, rendering 3d, wizualizacje wnętrz, produktów i animacje 3d dla stron www." />
+<meta property="og:image" content="https://example.com/img/logo.png" />
+<meta property="og:image:width" content="700" />
+<meta property="og:image:height" content="700" />
+
+<!-- Optional -->
+<meta property="business:contact_data:country_name" content="Poland" />
+<meta property="business:contact_data:locality" content="Warsaw" />
+<meta property="business:contact_data:region" content="Ursynów" />
+<meta property="business:contact_data:postal_code" content="00100" />
+<meta property="business:contact_data:street_address" content="99 Street" />
+```
+
+## Twitter
+
+```html
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:site" content="@username" />
+<meta property="twitter:title" content="Strony internetowe Warszawa" />
+<meta property="twitter:description" content="Tworzenie stron internetowych i sklepów internetowych, kodowanie stron produktów oraz szablonów e-mail newslettera w HTML, projektowanie logo, administracja serwerami VPS i hostingiem, identyfikacja wizualna, modelowanie 3D, rendering 3d, wizualizacje wnętrz, produktów i animacje 3d dla stron www." />
+<meta property="twitter:image" content="https://example.com/img/logo.png" />
+<meta property="twitter:image:alt" content="Example.com" />
+```
+
+## GTag
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_user_data: "granted",
+        ad_personalization: "granted",
+        ad_storage: "granted",
+        analytics_storage: "granted",
+        // 'wait_for_update': 500,
+    });
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXXXXX");
+</script>
 ```
 
 ## Structured Data
@@ -363,74 +451,7 @@ Literatura › Laureaci
 </script>
 ```
 
-## Favicon, geo
-
-```html
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
-
-<link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
-
-<meta name="geo.position" content="53.017850;20.904640" />
-<meta name="geo.placename" content="Warszawa" />
-```
-
-## Schema
-
-```html
-<!-- OpenGraph -->
-<meta property="og:url" content="https://example.com" />
-<meta property="og:locale" content="pl_PL" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Example.com" />
-<meta property="og:title" content="Strony internetowe Warszawa" />
-<meta property="og:description" content="Tworzenie stron internetowych i sklepów internetowych, kodowanie stron produktów oraz szablonów e-mail newslettera w HTML, projektowanie logo, administracja serwerami VPS i hostingiem, identyfikacja wizualna, modelowanie 3D, rendering 3d, wizualizacje wnętrz, produktów i animacje 3d dla stron www." />
-<meta property="og:image" content="https://example.com/img/logo.png" />
-<meta property="og:image:width" content="700" />
-<meta property="og:image:height" content="700" />
-<!-- Optional -->
-<meta property="business:contact_data:country_name" content="Poland" />
-<meta property="business:contact_data:locality" content="Warsaw" />
-<meta property="business:contact_data:region" content="Ursynów" />
-<meta property="business:contact_data:postal_code" content="00100" />
-<meta property="business:contact_data:street_address" content="99 Street" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@username" />
-<meta name="twitter:title" content="Strony internetowe Warszawa" />
-<meta name="twitter:description" content="Tworzenie stron internetowych i sklepów internetowych, kodowanie stron produktów oraz szablonów e-mail newslettera w HTML, projektowanie logo, administracja serwerami VPS i hostingiem, identyfikacja wizualna, modelowanie 3D, rendering 3d, wizualizacje wnętrz, produktów i animacje 3d dla stron www." />
-<meta name="twitter:image" content="https://example.com/img/logo.png" />
-<meta name="twitter:image:alt" content="Example.com" />
-```
-
-## GTag
-
-```html
-<!-- Remove from goole -->
-<meta name="googlebot" content="noindex, nofollow" />
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag("consent", "default", {
-        ad_user_data: "granted",
-        ad_personalization: "granted",
-        ad_storage: "granted",
-        analytics_storage: "granted",
-        // 'wait_for_update': 500,
-    });
-    gtag("js", new Date());
-    gtag("config", "G-XXXXXXXXXX");
-</script>
-```
-
-## Minimal Structured Data
+## Page Structured Data
 
 ```html
 <script type="application/ld+json">
@@ -473,7 +494,7 @@ Literatura › Laureaci
 
 ## Indexing robots.txt
 
-### Index
+## Index
 
 ```sh
 User-agent: *
