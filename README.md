@@ -109,6 +109,14 @@ https://search.google.com/test/rich-results
 
 ## Structured Data
 
+- https://schema.org
+- https://developers.google.com/search/docs/appearance/structured-data/local-business
+
+## Validators
+- https://classyschema.org/Visualisation
+- https://validator.schema.org
+- https://search.google.com/test/rich-results
+
 ## Website, subdomains, page menu, aboutpage contactpage, faqs
 
 https://github.com/atomjoy/seo/blob/main/website-subdomains-graph.html
@@ -505,11 +513,6 @@ https://github.com/atomjoy/seo/blob/main/website-subdomains-graph.html
 
 </html>
 ```
-
-## Validators
-- https://classyschema.org/Visualisation
-- https://validator.schema.org
-- https://search.google.com/test/rich-results
 
 ### WebPage
 
