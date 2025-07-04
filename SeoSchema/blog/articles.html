@@ -1,0 +1,53 @@
+<!-- Organization -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "@id": "#Organization-name",
+    "name": "My Organization"
+}
+</script>
+
+<!-- Recent Articles -->
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+        "name": "Recent Articles",
+        "numberOfItems": "1",
+        "itemListOrder": "Descending",
+        "itemListElement": [
+            {
+                "@type": "Article",
+                "position": "1",
+                "headline": "I am recent Article",
+                "publisher": {
+                    "@id": "#Organization-name"
+                }
+            }
+        ]
+
+    }
+</script>
+
+<!-- Popular Articles -->
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+        "name": "Popular Articles",
+        "numberOfItems": "2",
+        "itemListElement": [
+            {
+                "@type": "Article",
+                "position": "1",
+                "headline": "I am Popular Article"
+            },
+            {
+                "@type": "Article 2",
+                "position": "2",
+                "headline": "I am Popular Article 2"
+            }
+        ]
+    }
+</script>

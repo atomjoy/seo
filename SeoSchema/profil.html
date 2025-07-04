@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Angelo Huff on Cool Forum Platform</title>
+
+    https://developers.google.com/search/docs/appearance/structured-data/profile-page?hl=pl
+
+    <h1>Prawidłowe użycie:</h1>
+
+    Strona profilu użytkownika na forum lub w serwisie społecznościowym
+    Strona o autorze w witrynie z wiadomościami
+    Strona „O mnie” w witrynie bloga
+    Strona pracownika w witrynie firmy
+
+    <h2>Nieprawidłowe użycie:</h2>
+
+    Główna strona główna sklepu (zwykle zawiera wiele informacji niezwiązanych z profilem).
+    Witryna z opiniami o organizacji (organizacja nie jest powiązana z witryną).
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "dateCreated": "2024-12-23T12:34:00-05:00",
+      "dateModified": "2024-12-26T14:53:00-05:00",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Angelo Huff",
+        "alternateName": "ahuff23",
+        "identifier": "123475623",
+        "interactionStatistic": [{
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/FollowAction",
+          "userInteractionCount": 1
+        },{
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/LikeAction",
+          "userInteractionCount": 5
+        }],
+        "agentInteractionStatistic": {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/WriteAction",
+          "userInteractionCount": 2346
+        },
+        "description": "Defender of Truth",
+        "image": "https://example.com/avatars/ahuff23.jpg",
+        "sameAs": [
+          "https://www.example.com/real-angelo",
+          "https://example.com/profile/therealangelohuff"
+        ]
+      },
+      "hasPart": [{
+        "@type": "Article",
+        "headline": "Things to see in NJ",
+        "url": "https://example.com/things-to-see-nj",
+        "datePublished": "2014-02-23T18:34:00Z",
+        "author": { "@id": "#main-author" }
+      }]
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

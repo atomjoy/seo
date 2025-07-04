@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Website</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id":"https://example.com#website"
+        "url": "https://example.com",
+        "name": "Support Site",
+        hasPart: {
+            "@id":"https://support.example.com#website"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id":"https://support.example.com#website",
+        "url": "https://support.example.com",
+        "name": "Support Site",
+        "isPartOf": {
+            "@id":"https://example.com#website"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "@id": "https://website.com/#organization",
+        "name": "My Website",
+        "url": "http://example.com/",
+        "logo": "http://example.com/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+2348157437268",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.facebook.com/example-fb",
+            "https://twitter.com/example-twitter",
+            "https://instagram.com/example-instagram"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "@id": "http://example.com/#website",
+        "url": "http://example.com/",
+        "inLanguage": "en",
+        "publisher": {"@id": "http://example.com/#organization"}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "@id": "http://fr.example.com/#website",
+        "url": "http://fr.example.com/",
+        "inLanguage": "fr",
+        "publisher": {"@id": "https://website.com/#organization"}
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

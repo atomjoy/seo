@@ -1,0 +1,29 @@
+{
+    "@context": "http: //schema.org",
+    "@type": "Restaurant",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "12345",
+        "streetAddress": "740 Park Avenue"
+    },
+    "name": "Restaurant Pronto",
+    "description": "Best pizza in New York, guaranteed!",
+    "telephone": "+12345678900",
+    "url": "http: //example.com",
+    "image": "http://example.com/image.jpg",
+    "openingHours": [
+        "Mo-Fr 13:00-19:00"
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "230"
+    },
+    "priceRange": "$$",
+    "servesCuisine": [
+        "Italian",
+        "Pizza"
+    ]
+}

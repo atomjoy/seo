@@ -1,0 +1,162 @@
+{
+    "@context": "https://schema.org/",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https://rank-math.test/#person",
+            "name": "Rank Math"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://rank-math.test/#website",
+            "url": "https://rank-math.test",
+            "name": "Rank Math Website",
+            "inLanguage": "en-US",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://rank-math.test/search/?q={query}",
+                "query-input": "required name=query"
+            },
+            "publisher": {
+                "@id": "https://rank-math.test/#person"
+            },
+            "hasPart": {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://pl.rank-math.test#webpage",
+                "url": "https://pl.rank-math.test",
+                "name": "Rank Math Webpage",
+                "isPartOf": {
+                    "@id": "https://rank-math.test#website"
+                },
+                "inLanguage": "pl-PL",
+                "hasPart": {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "@id": "https://pl.rank-math.test/blog/#webpage",
+                    "url": "https://pl.rank-math.test/blog",
+                    "name": "Rank Math Blog Webpage",
+                    "isPartOf": {
+                        "@id": "https://pl.rank-math.test#webpage"
+                    },
+                    "inLanguage": "pl-PL"
+                }
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://rank-math.test/best-plugin/#webpage",
+            "url": "https://rank-math.test/best-plugin",
+            "name": "Rank Math - Best Plugin",
+            "description": "Excelent math plugin description.",
+            "isPartOf": {
+                "@id": "https://rank-math.test#website"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://rank-math.test/blog/#webpage",
+            "url": "https://rank-math.test/blog",
+            "name": "Rank Math - Blog",
+            "description": "Blog articles.",
+            "isPartOf": {
+                "@id": "https://rank-math.test#website"
+            },
+            "hasPart": {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://rank-math.test/blog/first-article/#webpage",
+                "url": "https://rank-math.test/blog/first-article",
+                "name": "Blog First Article - Rank Math",
+                "isPartOf": {
+                    "@id": "https://rank-math.test/blog/#webpage"
+                }
+            }
+        },
+        {
+            "@type": "ContactPage",
+            "@id": "https://rank-math.test/contact/#webpage",
+            "url": "https://rank-math.test/contact",
+            "name": "Rank Math - Contact",
+            "description": "Contact page.",
+            "isPartOf": {
+                "@id": "https://rank-math.test#website"
+            }
+        },
+        {
+            "@type": "AboutPage",
+            "@id": "https://rank-math.test/about/#webpage",
+            "url": "https://rank-math.test/about",
+            "name": "Rank Math - About Us",
+            "description": "About page.",
+            "isPartOf": {
+                "@id": "https://rank-math.test#website"
+            }
+        },
+        {
+            "@context": "http://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://rank-math.test/faqs/#webpage",
+            "url": "https://rank-math.test/faqs",
+            "inLanguage": "en-US",
+            "name": "Schema markup for your website hierarchy",
+            "description": "This is example of how to use Schema markup to define your website hierachy",
+            "isPartOf": {
+                "@id": "https://rank-math.test#website"
+            },
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Your first Question",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your answer to the first Question"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Your second Question",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your answer to the second Question"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#login",
+            "position": 1,
+            "name": "Sign Up",
+            "description": "Create your example profile.",
+            "url": "https://rank-math.test/login"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#about",
+            "position": 2,
+            "name": "About us",
+            "description": "Read more about example company",
+            "url": "https://rank-math.test/about"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#search",
+            "position": 3,
+            "name": "Search artists",
+            "description": "Search artists",
+            "url": "https://rank-math.test/search"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#contact",
+            "position": 4,
+            "name": "Contact Us",
+            "description": "Contact us for any queries",
+            "url": "https://rank-math.test/contact"
+        }
+    ]
+}

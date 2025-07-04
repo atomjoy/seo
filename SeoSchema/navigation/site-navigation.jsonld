@@ -1,0 +1,33 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "Main",
+            "description": "Create your profile.",
+            "url": "https://example.com"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "About us",
+            "description": "Read more about example company",
+            "url": "https://example.com/about"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Contact Us",
+            "description": "Contact us for any queries",
+            "url": "https://example.com/contact"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "Search",
+            "description": "Search queries.",
+            "url": "https://example.com/search"
+        }
+    ]
+}

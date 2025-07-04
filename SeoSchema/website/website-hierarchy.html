@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Website</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "http://example.com#website",
+        "url": "http://example.com",
+        "name": "Example Website",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://example.com/search?q={query}",
+            "query-input": "required name=query"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context":"http://schema.org",
+        "@type":"Webpage",
+        "@id":"https://www.example.com#webpage"
+        "url":"https://www.example.com",
+        "name":"Example Parent Webpage",
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context":"http://schema.org",
+        "@type": "FAQPage",
+        "@id":"https://www.example.com/content#webpage",
+        "url":"https://www.example.com/content",
+        "inLanguage":"en-gb",
+        "name": "Schema markup for your website hierarchy",
+        "description":"This is example of how to use Schema markup to define your website hierachy",
+        "isPartOf":{
+            "@id":"https://www.example.com#webpage"
+        },
+        "about": [
+            {"@type": "Thing", "name": "Schema", "sameAs": "https://schema.org/"}
+        ],
+        "mentions": [
+            {"@type": "Thing", "name": "Website", "sameAs": "https://en.wikipedia.org/wiki/Website"},
+            {"@type": "Thing", "name": "Hierachy", "sameAs": "https://en.wikipedia.org/wiki/Hierarchy"}
+        ],
+        "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Your first Question",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Your answer to the first Question"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Your second Question",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                    "text": "Your answer to the second Question"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

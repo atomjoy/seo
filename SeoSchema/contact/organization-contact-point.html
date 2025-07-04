@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Contact Us</title>
+
+    https://schema.org/ContactPoint
+    https://schema.org/mainEntityOfPage
+
+    <script type="application/ld+json">
+    {
+        "@context" : "https://schema.org",
+        "@type" : "Organization",
+        "url" : "http://www.example.com",
+        "contactPoint" : [
+            "@type": "ContactPage",
+            "@id": "https://example.com/contact",
+            "url": "https://example.com/contact",
+            "mainEntity": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "+1-123-456-7890",
+                "email": "support@example.com",
+                "contactOption": "TollFree",
+                "areaServed": "US",
+                "availableLanguage": "English",
+                "hoursAvailable": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                        ],
+                        "opens": "09:00",
+                        "closes": "17:00"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<html>
+
+<head>
+    <title>Homepage</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@graph": [
+            {
+                "@context": "https://schema.org",
+                "@type": [
+                    "Person",
+                    "Organization"
+                ],
+                "@id": "https://atomjoy.test/#person",
+                "name": "Atomjoy",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://atomjoy.test/logo-small.jpg",
+                    "height": 125,
+                    "width": 125
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id":"https://atomjoy.test/#website",
+                "url": "https://atomjoy.test",
+                "image": "https://atomjoy.test/image.jpg",
+                "inLanguage": "en-US",
+                "name": "Atomjoy Site",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://atomjoy.test/search/?q={query}",
+                    "query-input": "required name=query"
+                },
+                "publisher": {
+                    "@id": "https://atomjoy.test/#person"
+                },
+                "mainEntity": {
+                    "@context": "http://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Alex Bold",
+                    "image":"https://atomjoy.test/person/alex-bold.jpg",
+                    "priceRange":"$$$",
+                    "telephone":"500-600-7000",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "ul. Klasyczna 44",
+                        "addressLocality": "Warsaw",
+                        "addressRegion": "Mazowieckie",
+                        "addressCountry": "PL",
+                        "postalCode": "00-100"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": "900"
+                    }
+                },
+                "keywords":[
+                    "Social Networking",
+                    "Social Media",
+                    "Web",
+                    "Technology",
+                    "Web 3.0",
+                    "Tech",
+                    "Blog",
+                    "Facebook",
+                    "YouTube",
+                    "Google"
+                ]
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://atomjoy.test/plugins/#webpage",
+                "url": "https://atomjoy.test/plugins",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - Plugins",
+                "description": "Excelent math plugin description.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://atomjoy.test/plugins/best-plugin/#webpage",
+                "url": "https://atomjoy.test/plugins/best-plugin",
+                "inLanguage": "en-US",
+                "name": "Best Plugin - Atomjoy",
+                "description": "Excelent math plugin description.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/plugins/#webpage"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://atomjoy.test/blog/#webpage",
+                "url": "https://atomjoy.test/blog",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - Blog",
+                "description": "Blog articles.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://atomjoy.test/blog/first-article/#webpage",
+                "url": "https://atomjoy.test/blog/first-article",
+                "inLanguage": "en-US",
+                "name": "Blog First Article - Atomjoy",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/blog/#webpage"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "ContactPage",
+                "@id": "https://atomjoy.test/contact/#webpage",
+                "url": "https://atomjoy.test/contact",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - Contact",
+                "description": "Contact page.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "AboutPage",
+                "@id": "https://atomjoy.test/about/#webpage",
+                "url": "https://atomjoy.test/about",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - About Us",
+                "description": "About page.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "FAQPage",
+                "@id": "https://atomjoy.test/faqs/#webpage",
+                "url": "https://atomjoy.test/faqs",
+                "inLanguage": "en-US",
+                "name": "Schema markup for your website hierarchy",
+                "description": "This is example of how to use Schema markup to define your website hierachy",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                },
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Your first Question",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Your answer to the first Question"
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Your second Question",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Your answer to the second Question"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "#login",
+                "position": 1,
+                "name": "Sign Up",
+                "description": "Create your example profile.",
+                "url": "https://atomjoy.test/login"
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "#about",
+                "position": 2,
+                "name": "About us",
+                "description": "Read more about example company",
+                "url": "https://atomjoy.test/about"
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "#search",
+                "position": 3,
+                "name": "Search artists",
+                "description": "Search artists",
+                "url": "https://atomjoy.test/search"
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "#contact",
+                "position": 4,
+                "name": "Contact Us",
+                "description": "Contact us for any queries",
+                "url": "https://atomjoy.test/contact"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
