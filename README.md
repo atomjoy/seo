@@ -1,6 +1,6 @@
-# SEO
+# SEO & Schema
 
-SEO Przewodnik dla początkujących.
+A beginner's guide to SEO and Structured Data.
 
 ## Linki
 
@@ -108,6 +108,408 @@ https://search.google.com/test/rich-results
 ```
 
 ## Structured Data
+
+## Website, subdomains, page menu, aboutpage contactpage, faqs
+
+https://github.com/atomjoy/seo/blob/main/website-subdomains-graph.html
+
+```html
+<html>
+
+<head>
+    <title>Atomjoy</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@graph": [
+            {
+                "@context": "https://schema.org",
+                "@type": [
+                    "Person"
+                ],
+                "@id": "https://atomjoy.test/#founder",
+                "name": "Alex Lukas",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://atomjoy.test/default/founder/alex-lukas.webp",
+                    "height": 125,
+                    "width": 125
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "telephone": "+1-100-200-300",
+                    "email": "alex@atomjoy.test"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": [
+                    "Organization"
+                ],
+                "@id": "https://atomjoy.test/#organization",
+                "name": "Atomjoy",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://atomjoy.test/default/organization/atomjoy.webp",
+                    "height": 125,
+                    "width": 125
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "telephone": "+1-100-200-300",
+                    "email": "contact@atomjoy.test"
+                },
+                "foundingDate": "2000",
+                "founder": {
+                    "@id": "https://atomjoy.test/#founder"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id":"https://atomjoy.test/#website",
+                "url": "https://atomjoy.test",
+                "image": "https://atomjoy.test/default/logo/logo.webp",
+                "inLanguage": "en-US",
+                "name": "Atomjoy",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://atomjoy.test/search/?q={query}",
+                    "query-input": "required name=query"
+                },
+                "publisher": {
+                    "@id": "https://atomjoy.test/#organization"
+                },
+                "mainEntity": {
+                    "@context": "http://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Atomjoy Studio",
+                    "image":"https://atomjoy.test/default/company/logo.webp",
+                    "priceRange":"$$$",
+                    "telephone":"+1-100-200-300",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "ul. Klasyczna 44",
+                        "addressLocality": "Warsaw",
+                        "addressRegion": "Mazowieckie",
+                        "addressCountry": "PL",
+                        "postalCode": "00-100"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": "900"
+                    }
+                },
+                "keywords":[
+                    "Social Networking",
+                    "Social Media",
+                    "Web",
+                    "Technology",
+                    "Web 3.0",
+                    "Tech",
+                    "Blog",
+                    "Facebook",
+                    "YouTube",
+                    "Google"
+                ]
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id":"https://jobs.atomjoy.test/#website",
+                "url": "https://jobs.atomjoy.test",
+                "image": "https://jobs.atomjoy.test/default/logo/logo.webp",
+                "inLanguage": "en-US",
+                "name": "Jobs Site",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://jobs.atomjoy.test/search/?q={query}",
+                    "query-input": "required name=query"
+                },
+                "isPartOf": {
+                    "@id":"https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id":"https://support.atomjoy.test/#website",
+                "url": "https://support.atomjoy.test",
+                "image": "https://support.atomjoy.test/default/logo/logo.webp",
+                "inLanguage": "en-US",
+                "name": "Support Site",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://support.atomjoy.test/search/?q={query}",
+                    "query-input": "required name=query"
+                },
+                "isPartOf": {
+                    "@id":"https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://atomjoy.test/plugins/#webpage",
+                "url": "https://atomjoy.test/plugins",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - Plugins",
+                "description": "Plugins page description.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                },
+                "hasPart":{
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "@id": "https://atomjoy.test/plugins/best-plugin/#webpage",
+                    "url": "https://atomjoy.test/plugins/best-plugin",
+                    "inLanguage": "en-US",
+                    "name": "Best Php Plugin - Atomjoy",
+                    "description": "Excelent php plugin description.",
+                    "isPartOf": {
+                        "@id": "https://atomjoy.test/plugins/#webpage"
+                    }
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://atomjoy.test/blog/#webpage",
+                "url": "https://atomjoy.test/blog",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - Blog",
+                "description": "Blog articles.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                },
+                "hasPart": {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "@id": "https://atomjoy.test/blog/first-article/#webpage",
+                    "url": "https://atomjoy.test/blog/first-article",
+                    "inLanguage": "en-US",
+                    "name": "Blog First Article - Atomjoy",
+                    "isPartOf": {
+                        "@id": "https://atomjoy.test/blog/#webpage"
+                    }
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "ContactPage",
+                "@id": "https://atomjoy.test/contact/#webpage",
+                "url": "https://atomjoy.test/contact",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - Contact",
+                "description": "Contact page.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "AboutPage",
+                "@id": "https://atomjoy.test/about/#webpage",
+                "url": "https://atomjoy.test/about",
+                "inLanguage": "en-US",
+                "name": "Atomjoy - About Us",
+                "description": "About page.",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                }
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "FAQPage",
+                "@id": "https://atomjoy.test/faqs/#webpage",
+                "url": "https://atomjoy.test/faqs",
+                "inLanguage": "en-US",
+                "name": "Schema markup for your website hierarchy",
+                "description": "This is example of how to use Schema markup to define your website hierachy",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                },
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Your first Question",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Your answer to the first Question"
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Your second Question",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Your answer to the second Question"
+                        }
+                    }
+                ]
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id": "https://pl.atomjoy.test/#website",
+                "url": "https://pl.atomjoy.test",
+                "name": "Atomjoy",
+                "isPartOf": {
+                    "@id": "https://atomjoy.test/#website"
+                },
+                "inLanguage": "pl-PL",
+                "hasPart": {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "@id": "https://pl.atomjoy.test/blog/#webpage",
+                    "url": "https://pl.atomjoy.test/blog",
+                    "name": "Atomjoy Blog",
+                    "isPartOf": {
+                        "@id": "https://pl.atomjoy.test/#website"
+                    },
+                    "inLanguage": "pl-PL",
+                    "hasPart": {
+                        "@context": "https://schema.org",
+                        "@type": "WebPage",
+                        "@id": "https://pl.atomjoy.test/blog/first-article/#webpage",
+                        "url": "https://pl.atomjoy.test/blog/first-article",
+                        "name": "Pierwszy Artykuł - Atomjoy",
+                        "isPartOf": {
+                            "@id": "https://pl.atomjoy.test/blog/#webpage"
+                        },
+                        "inLanguage": "pl-PL"
+                    }
+                }
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "ItemList",
+                "name": "Main Menu",
+                "itemListElement": [
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://atomjoy.test",
+                        "position": 1,
+                        "name": "Home",
+                        "description": "Atomjoy home page.",
+                        "url": "https://atomjoy.test"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://atomjoy.test/#login",
+                        "position": 2,
+                        "name": "Sign Up",
+                        "description": "Create your example profile.",
+                        "url": "https://atomjoy.test/login"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://atomjoy.test/#about",
+                        "position": 3,
+                        "name": "About",
+                        "description": "Read more about example company",
+                        "url": "https://atomjoy.test/about"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://atomjoy.test/#search",
+                        "position": 4,
+                        "name": "Search",
+                        "description": "Search answers.",
+                        "url": "https://atomjoy.test/search"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://atomjoy.test/#contact",
+                        "position": 5,
+                        "name": "Contact Us",
+                        "description": "Contact us for any queries",
+                        "url": "https://atomjoy.test/contact"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://atomjoy.test/#faqs",
+                        "position": 6,
+                        "name": "FAQS",
+                        "description": "Frequently asked questions and answers.",
+                        "url": "https://atomjoy.test/faqs"
+                    }
+                ]
+            },
+            {
+                "@context": "http://schema.org",
+                "@type": "ItemList",
+                "name": "Main Menu",
+                "itemListElement": [
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://pl.atomjoy.test",
+                        "position": 1,
+                        "name": "Atomjoy",
+                        "description": "Atomjoy home page.",
+                        "url": "https://pl.atomjoy.test"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://pl.atomjoy.test/#login",
+                        "position": 2,
+                        "name": "Sign Up",
+                        "description": "Create your example profile.",
+                        "url": "https://pl.atomjoy.test/login"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://pl.atomjoy.test/#about",
+                        "position": 3,
+                        "name": "About us",
+                        "description": "Read more about example company",
+                        "url": "https://pl.atomjoy.test/about"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://pl.atomjoy.test/#search",
+                        "position": 4,
+                        "name": "Search artists",
+                        "description": "Search artists",
+                        "url": "https://pl.atomjoy.test/search"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://pl.atomjoy.test/#contact",
+                        "position": 5,
+                        "name": "Contact Us",
+                        "description": "Contact us for any queries",
+                        "url": "https://pl.atomjoy.test/contact"
+                    },
+                    {
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://pl.atomjoy.test/#faqs",
+                        "position": 6,
+                        "name": "FAQS",
+                        "description": "Frequently asked questions and answers.",
+                        "url": "https://pl.atomjoy.test/faqs"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
+```
+
+## Validators
+- https://classyschema.org/Visualisation
+- https://validator.schema.org
+- https://search.google.com/test/rich-results
 
 ### WebPage
 
