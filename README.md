@@ -604,6 +604,8 @@ Literatura › Laureaci
 ### Breadcrumbs Blog
 
 ```html
+<title>How to implement Schema Markup in Example</title>
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -613,7 +615,7 @@ Literatura › Laureaci
                 "@type": "ListItem",
                 "position": 1,
                 "item": {
-                    "@id": "https://example.com/",
+                    "@id": "https://example.com",
                     "name": "Home"
                 }
             },
@@ -621,7 +623,7 @@ Literatura › Laureaci
                 "@type": "ListItem",
                 "position": 2,
                 "item": {
-                    "@id": "https://example.com/blog/",
+                    "@id": "https://example.com/blog",
                     "name": "Blog"
                 }
             },
@@ -629,12 +631,87 @@ Literatura › Laureaci
                 "@type": "ListItem",
                 "position": 3,
                 "item": {
-                    "@id": "https://example.com/blog/how-to-implement-schema-markup-in-example/",
+                    "@id": "https://example.com/blog/how-to-implement-schema-markup-in-example",
                     "name": "How to implement Schema Markup in Example"
                 }
             }
         ]
     }
+</script>
+```
+
+### Person
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Alex Space",
+  "url": "https://example.com",
+  "alternateName": "Alexander Space",
+  "familyName": "Space",
+  "nationality": "Poland",
+  "birthDate": "2020-01-01",
+  "email": "email@example.com",
+  "brand": "Złota Rybka",
+  "knowsAbout": "AI, content writing, digital media, programing.",
+  "jobTitle": "CEO",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Złota Rybka"
+  }
+  "description": "Defender of Truth",
+  "sameAs": [
+    "https://youtube.com/@username",
+    "https://github.com/username",
+    "https://example.com"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Country",
+    "addressRegion": "Region",
+    "postalCode": "1010101",
+    "streetAddress": "Address",
+    "email": "mail@example.com",
+    "telephone": "00123457869"
+  },
+  "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+1-100-200-300",
+      "email": "alex@example.com"
+  },
+  "image": "https://example.com/image.webp",
+  "logo": {
+    "url": "https://example.com/icon.jpg",
+    "width": "512",
+    "@context": "http://schema.org",
+    "@type": "ImageObject"
+  },
+  "hasPart": [{
+    "@type": "Article",
+    "headline": "Things to see in NJ",
+    "url": "https://example.com/things-to-see-nj",
+    "datePublished": "2014-02-23T18:34:00Z",
+    "author": { "@id": "#main-author" }
+  }],
+  "identifier": "123475623",
+  "interactionStatistic": [{
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/FollowAction",
+    "userInteractionCount": 1
+  },{
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/LikeAction",
+    "userInteractionCount": 5
+  }],
+  "agentInteractionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/WriteAction",
+    "userInteractionCount": 2346
+  },
+}
 </script>
 ```
 
@@ -895,6 +972,250 @@ Literatura › Laureaci
         "openingHours": ["Mo-Fr 09:00-15:00"]
     }
 </script>
+```
+
+## Navigation
+
+### Graph
+
+```json
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "Main",
+            "description": "Create your profile.",
+            "url": "https://example.com"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "About us",
+            "description": "Read more about example company",
+            "url": "https://example.com/about"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Contact Us",
+            "description": "Contact us for any queries",
+            "url": "https://example.com/contact"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "Search",
+            "description": "Search queries.",
+            "url": "https://example.com/search"
+        }
+    ]
+}
+```
+
+### ItemList
+
+```json
+{
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+        {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "Sign Up",
+            "description": "Create your example profile.",
+            "url": "https://example.com"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "About us",
+            "description": "Read more about example company",
+            "url": "https://example.com/about"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Search artists",
+            "description": "Search artists",
+            "url": "https://example.com/search"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "Contact Us",
+            "description": "Contact us for any queries",
+            "url": "https://example.com/contact"
+        }
+    ]
+}
+```
+
+### SinglePage sections
+
+```json
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#table-of-contents",
+            "name": "Section 1",
+            "url": "https://www.example.com/page#sec-1"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#table-of-contents",
+            "name": "Section 2",
+            "url": "https://www.example.com/page#tsec-2"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#table-of-contents",
+            "name": "Section 3",
+            "url": "https://www.example.com/page#sec-3"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#pagination",
+            "name": "Previous page",
+            "url": "https://www.example.com/page1"
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": "#pagination",
+            "name": "Next page",
+            "url": "https://www.example.com/page2"
+        }
+    ]
+}
+```
+
+## Events
+
+### Music event
+
+```html
+<html>
+
+<head>
+    <title>The Adventures of Kira and Morrison</title>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "MusicEvent",
+      "location": {
+        "@type": "MusicVenue",
+        "name": "Chicago Symphony Center",
+        "address": "220 S. Michigan Ave, Chicago, Illinois, USA"
+      },
+      "name": "Shostakovich Leningrad",
+      "offers": {
+        "@type": "Offer",
+        "url": "/examples/ticket/12341234",
+        "price": "40",
+        "priceCurrency": "USD",
+        "availability": "http://schema.org/InStock"
+      },
+      "performer": [
+        {
+          "@type": "MusicGroup",
+          "name": "Chicago Symphony Orchestra",
+          "sameAs": [
+            "http://cso.org/",
+            "http://en.wikipedia.org/wiki/Chicago_Symphony_Orchestra"
+          ]
+        },
+        {
+          "@type": "Person",
+          "image": "/examples/jvanzweden_s.jpg",
+          "name": "Jaap van Zweden",
+          "sameAs": "http://www.jaapvanzweden.com/"
+        }
+      ],
+      "startDate": "2014-05-23T20:00",
+      "workPerformed": [
+        {
+          "@type": "CreativeWork",
+          "name": "Britten Four Sea Interludes and Passacaglia from Peter Grimes",
+          "sameAs": "http://en.wikipedia.org/wiki/Peter_Grimes"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Shostakovich Symphony No. 7 (Leningrad)",
+          "sameAs": "http://en.wikipedia.org/wiki/Symphony_No._7_(Shostakovich)"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
+```
+
+### Event
+
+```html
+<html>
+
+<head>
+    <title>The Adventures of Kira and Morrison</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "The Adventures of Kira and Morrison",
+      "startDate": "2025-07-21T19:00-05:00",
+      "endDate": "2025-07-21T23:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Snickerpark Stadium",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 West Snickerpark Dr",
+          "addressLocality": "Snickertown",
+          "postalCode": "19019",
+          "addressRegion": "PA",
+          "addressCountry": "US"
+        }
+      },
+      "image": [
+        "https://example.com/photos/1x1/photo.jpg",
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg"
+       ],
+      "description": "The Adventures of Kira and Morrison is coming to Snickertown in a can't miss performance.",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.example.com/event_offer/12345_202403180430",
+        "price": 30,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-05-21T12:00"
+      },
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": "Kira and Morrison"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Kira and Morrison Music",
+        "url": "https://kiraandmorrisonmusic.com"
+      }
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
 ```
 
 ## Indexing robots.txt
