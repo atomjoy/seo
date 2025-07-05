@@ -1,7 +1,7 @@
 {
     "@context": "http://schema.org",
     "@type": "Restaurant",
-    "url": "http://www.thisisarestaurant.com",
+    "url": "http://www.example.com",
     "name": "The Restaurant",
     "image": "http://www.example.com/image-of-some-restaurant.jpg",
     "telephone": "5615551212",
@@ -26,7 +26,7 @@
                 "@type": "MenuSection",
                 "name": "Dinner",
                 "description": "Dinner dishes",
-                "image": "https://thisisarestaurant.com/dinner_dishes.jpg",
+                "image": "https://example.com/dinner_dishes.jpg",
                 "offers": {
                     "@type": "Offer",
                     "availabilityEnds": "T8:22:00",
@@ -37,7 +37,7 @@
                         "@type": "MenuSection",
                         "name": "Starters",
                         "description": "Appetizers and such",
-                        "image": "https://thisisarestaurant.com/starter_dishes.jpg",
+                        "image": "https://example.com/starter_dishes.jpg",
                         "offers": {
                             "@type": "Offer",
                             "availabilityEnds": "T8:22:00",
@@ -59,7 +59,7 @@
                         "@type": "MenuSection",
                         "name": "Soups & Salads",
                         "description": "Salads and a few choices of soup",
-                        "image": "https://thisisarestaurant.com/soup_and_salad_dishes.jpg",
+                        "image": "https://example.com/soup_and_salad_dishes.jpg",
                         "offers": {
                             "@type": "Offer",
                             "availabilityEnds": "T8:22:00",

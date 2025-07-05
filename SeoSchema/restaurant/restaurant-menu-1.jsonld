@@ -1,9 +1,9 @@
 {
     "@context": "http://schema.org",
     "@type": "Restaurant",
-    "url": "http://www.pronto-ny.com",
+    "url": "http://www.example",
     "name": "Restaurant Pronto",
-    "image": "http://www.pronto-ny.com/pronto-image.jpg",
+    "image": "http://www.example/pronto-image.jpg",
     "description": "Best pizza in New York, guaranteed!",
     "servesCuisine": [
         "Italian"
@@ -17,7 +17,7 @@
                 "@type": "MenuSection",
                 "name": "Dinner",
                 "description": "Dinner dishes",
-                "image": "https://pronto-ny.com/dinner_dishes.jpg",
+                "image": "https://example/dinner_dishes.jpg",
                 "offers": {
                     "@type": "Offer",
                     "availabilityEnds": "T8:21:00",
@@ -28,7 +28,7 @@
                         "@type": "MenuSection",
                         "name": "Starters",
                         "description": "Appetizers",
-                        "image": "https://pronto-ny.com/starters.jpg",
+                        "image": "https://example/starters.jpg",
                         "offers": {
                             "@type": "Offer",
                             "availabilityEnds": "T8:21:00",
@@ -50,7 +50,7 @@
                         "@type": "MenuSection",
                         "name": "Soups & Salads",
                         "description": "A few choices of soup and salads",
-                        "image": "https://pronto-ny.com/soup_and_salads.jpg",
+                        "image": "https://example/soup_and_salads.jpg",
                         "offers": {
                             "@type": "Offer",
                             "availabilityEnds": "T8:21:00",

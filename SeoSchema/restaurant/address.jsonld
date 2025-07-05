@@ -8,8 +8,10 @@
         "postalCode": "12345",
         "streetAddress": "740 Park Avenue"
     },
-    "description": "Best pizza in New York, guaranteed!",
+    "url": "https://example.com",
     "name": "Restaurant Pronto",
+    "description": "Best pizza in New York, guaranteed!",
     "telephone": "+12345678900",
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 13: 00-19: 00"
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 13:00-19:00",
+    "hasMenu": "/menu"
 }
