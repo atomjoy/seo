@@ -64,6 +64,109 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "{{ config('settings.title') }}",
-        "url": "{{ config('settings.url') }}"
+        "url": "{{ config('settings.url') }}",
+        "alternateName": ["EX", "Example Shop", "example.com"]
     }
+</script>
+
+<!-- Schema Place -->
+<script type="application/ld+json">
+{
+    "@type": "Place",
+    "@id": "https://example.com/#place",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Cherry Lane",
+        "addressLocality": "Long Beach",
+        "addressRegion": "California",
+        "postalCode": "90802",
+        "addressCountry": "USA"
+    }
+}
+</script>
+
+<!-- WebPage Breadcrumbs for (Award Winners) -->
+<meta property="og:title" content="Example: Award Winner | SciFi Movie Awards">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Books",
+        "item": "https://example.com/books"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Science Fiction",
+        "item": "https://example.com/books/sciencefiction"
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Award Winners"
+    }]
+}
+</script>
+
+<!-- Schema Blog Image -->
+<meta property="og:image" content="https://example.com/images/awards.png">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://example.com/url",
+    "image": "https://example.com/images/awards.png"
+}
+</script>
+
+<!-- Main page navigation -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "SiteNavigationElement",
+    "name": "Main navigation",
+    "url": "https://www.example.com",
+    "description": "Home page",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "WebSite",
+                "@id": "#website",
+                "name": "Home Page",
+                "url": "https://example.com",
+                "position": 1
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#services-page",
+                "name": "Services page",
+                "url": "https://example.com/services",
+                "position": 2
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#contact-page",
+                "name": "Contact page",
+                "url": "https://example.com/contact",
+                "position": 2
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#about-page",
+                "name": "About page",
+                "url": "https://example.com/about",
+                "position": 2
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#faq-page",
+                "name": "FAQ page",
+                "url": "https://example.com/faq",
+                "position": 2
+            }
+        ]
+    }
+}
 </script>
