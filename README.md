@@ -28,7 +28,11 @@ https://search.google.com/test/rich-results
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Short description goes here." />
 <meta name="keywords" content="one, two" />
+
+<!-- Title -->
 <title>Example: Short title goes here | Web Developer</title>
+<meta property="og:title" content="Example: Short title goes here | Web Developer" />
+<meta property="og:image" content="https://example.com/images/page-main-image-or-logo.png" />
 <link rel="canonical" href="https://example.com/" />
 
 <!-- Allow bots -->
@@ -971,6 +975,136 @@ Literatura › Laureaci
         "priceRange": "$$$",
         "openingHours": ["Mo-Fr 09:00-15:00"]
     }
+</script>
+```
+
+## Navigation Breadcrumbs Google
+
+### WebPage subpage links
+
+```html
+<title>Example: Award Winners | SciFi Movies Winners</title>
+<meta property="og:title" content="Example: Award Winners | SciFi Movies Winners">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Books",
+        "item": "https://example.com/books"
+    },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Science Fiction",
+        "item": "https://example.com/books/sciencefiction"
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Award Winners",
+        "item": "https://example.com/books/sciencefiction/awards"
+    }]
+}
+</script>
+
+<!-- Page Image -->
+<meta property="og:image" content="https://example.com/images/winners.png">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://example.com/url",
+    "primaryImageOfPage": "https://example.com/images/winners.png"
+}
+</script>
+```
+
+### Main page navigation
+
+```html
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "SiteNavigationElement",
+    "name": "Main navigation",
+    "url": "https://www.example.com",
+    "description": "Home page",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "WebSite",
+                "@id": "#website",
+                "name": "Home page",
+                "url": "https://example.com",
+                "position": 1
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#website-services",
+                "name": "Services page",
+                "url": "https://example.com/services",
+                "position": 2
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#website-contact",
+                "name": "Contact page",
+                "url": "https://example.com/contact",
+                "position": 2
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#website-about",
+                "name": "About page",
+                "url": "https://example.com/about",
+                "position": 2
+            },
+            {
+                "@type": "WebPage",
+                "@id": "#website-faq",
+                "name": "FAQ page",
+                "url": "https://example.com/faq",
+                "position": 2                
+            }
+        ]
+    }
+}
+</script>
+```
+
+### Page categories collection
+
+```html
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "CollectionPage",
+    "name": "Main categories",
+    "url": "https://www.example.com/category",
+    "description": "Categories page",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "WebPage",
+                "name": "Category Kids",
+                "url": "https://example.com/category/kids"
+            },
+            {
+                "@type": "WebPage",
+                "name": "Category Man",
+                "url": "https://example.com/category/man"
+            },
+            {
+                "@type": "WebPage",
+                "name": "Category Woman",
+                "url": "https://example.com/category/woman"
+            }
+        ]
+    }
+}
 </script>
 ```
 
