@@ -21,6 +21,33 @@ https://pagespeed.web.dev/
 https://search.google.com/test/rich-results
 ```
 
+## Load Schema dynamically with javascript
+
+```js
+export async function loadSchema(
+    file: string = '/schema/website.json',
+    minLength: number = 20,
+) {
+    // Remove all
+    document
+        .querySelectorAll("head script[type='application/ld+json']")
+        .forEach((i) => i.remove());
+
+    // Load new
+    await fetch(file)
+        .then((r) => r.text())
+        .then((t) => {
+            if (t.length > minLength) {
+                const s = document.createElement('script');
+                s.setAttribute('type', 'application/ld+json');
+                s.textContent = t;
+                document.head.appendChild(s);
+            }
+        })
+        .catch((e) => console.log(e));
+}
+```
+
 ## Title
 
 ```html
