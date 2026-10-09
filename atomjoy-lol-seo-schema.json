@@ -123,14 +123,7 @@
               "serviceType": "Web Development",
               "name": "Tworzenie stron internetowych i aplikacji webowych",
               "description": "Projektowanie i kodowanie szybkich, responsywnych stron internetowych, landing page oraz dedykowanych aplikacji dla biznesu w PHP, Laravel, Inertia, Vue i Tailwind.",
-              "provider": { "@id": "https://atomjoy.lol#organization" },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": 5.0,
-                "bestRating": 5,
-                "worstRating": 1,
-                "ratingCount": 1
-              }
+              "provider": { "@id": "https://atomjoy.lol#organization" }
             }
           },
           {
