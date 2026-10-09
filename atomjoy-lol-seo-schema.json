@@ -1,0 +1,185 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageObject",
+      "@id": "https://atomjoy.lol#banner",
+      "url": "https://atomjoy.lol/img/banner.webp",
+      "caption": "Baner marki Atomjoy",
+      "width": 2500,
+      "height": 1080
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://atomjoy.lol#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": "https://atomjoy.lol",
+          "name": "Strona główna"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://atomjoy.lol#owner",
+      "name": "Marcin Łukaszewski",
+      "jobTitle": "Web Developer & Grafik 3D",
+      "knowsAbout": ["Tworzenie stron internetowych", "Tworzenie aplikacji webowych", "WordPress", "Pozycjonowanie SEO", "Projektowanie logo", "Modelowanie 3D", "Programista PHP", "Laravel", "Vue3", "Grafik 3D"],
+      "url": "https://atomjoy.lol",
+      "image": "https://atomjoy.lol/img/founder.webp",
+      "sameAs": ["https://github.com/atomjoy", "https://dribbble.com/atomjoy", "https://x.com/atomjoys"],
+      "worksFor": {
+        "@id": "https://atomjoy.lol#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atomjoy.lol",
+      "url": "https://atomjoy.lol",
+      "name": "Atomjoy",
+      "alternateName": ["Atomjoy Strony Internetowe", "Atomjoy Aplikacje Web", "Atomjoy Przasnysz"],
+      "publisher": {
+        "@id": "https://atomjoy.lol#organization"
+      },
+      "inLanguage": "pl-PL"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://atomjoy.lol#webpage",
+      "url": "https://atomjoy.lol",
+      "name": "Strony internetowe i Aplikacje webowe Przasnysz",
+      "description": "Tworzę szybkie, bezpieczne, responsywne strony internetowe i aplikacje webowe. Projektuję logo, szablony e-mail oraz modele i wizualizacje 3D.",
+      "keywords": "przasnysz,tworzenie stron internetowych,strony internetowe,strony www,aplikacje webowe,dedykowane aplikacje,landing page,wizytówki google,web developer,szablony email,projektowanie logo,grafik 3d,modelowanie 3d",
+      "primaryImageOfPage": { "@id": "https://atomjoy.lol#banner" },
+      "image": { "@id": "https://atomjoy.lol#banner" },
+      "isPartOf": {
+        "@id": "https://atomjoy.lol"
+      },
+      "about": {
+        "@id": "https://atomjoy.lol#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://atomjoy.lol#breadcrumb"
+      },
+      "inLanguage": "pl-PL"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://atomjoy.lol#organization",
+      "url": "https://atomjoy.lol",
+      "image": "https://atomjoy.lol/img/banner.webp",
+      "logo": "https://atomjoy.lol/img/logo.png",
+      "name": "Atomjoy",
+      "founder": {
+        "@id": "https://atomjoy.lol#owner"
+      },
+      "employee": {
+        "@id": "https://atomjoy.lol#owner"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Przasnysz",
+        "postalCode": "06-300",
+        "addressCountry": "PL"
+      },
+      "telephone": "+48732977888",
+      "email": "mluk123@proton.me",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "15:00"
+      },
+      "sameAs": ["https://github.com/atomjoy", "https://dribbble.com/atomjoy", "https://x.com/atomjoys", "https://youtube.com/@atomjoys", "https://tiktok.com/@atomjoys", "https://useme.com/pl/roles/contractor/atomjoy,674440"],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.017788,
+        "longitude": 20.904628
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Przasnysz"
+        },
+        {
+          "@type": "State",
+          "name": "Mazowieckie"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "5",
+        "ratingCount": "1"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usługi IT i Graficzne Atomjoy",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "1000.00",
+            "priceCurrency": "PLN",
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "Web Development",
+              "name": "Tworzenie stron internetowych i aplikacji webowych",
+              "description": "Projektowanie i kodowanie szybkich, responsywnych stron internetowych, landing page oraz dedykowanych aplikacji dla biznesu w PHP, Laravel i Vue.",
+              "provider": { "@id": "https://atomjoy.lol#organization" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "price": "500.00",
+            "priceCurrency": "PLN",
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "Email Marketing Services",
+              "name": "Kodowanie szablonów email newslettera",
+              "description": "Tworzenie profesjonalnych i responsywnych szablonów wiadomości e-mail oraz newsletterów dostosowanych do popularnych programów pocztowych.",
+              "provider": { "@id": "https://atomjoy.lol#organization" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "price": "2000.00",
+            "priceCurrency": "PLN",
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "Graphic Design",
+              "name": "Projektowanie logo i identyfikacji wizualnej",
+              "description": "Kreowanie unikalnych logotypów oraz elementów identyfikacji wizualnej dla firm i marek osobistych.",
+              "provider": { "@id": "https://atomjoy.lol#organization" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "price": "125.00",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "125.00",
+              "priceCurrency": "PLN",
+              "referenceQuantity": {
+                "@type": "QuantitativeValue",
+                "value": "1",
+                "unitText": "hour"
+              }
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "serviceType": "3D Modeling",
+              "name": "Modelowanie 3D i wizualizacje",
+              "description": "Tworzenie profesjonalnych modeli trójwymiarowych oraz renderów i wizualizacji produktowych 3D.",
+              "provider": { "@id": "https://atomjoy.lol#organization" }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
