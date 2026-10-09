@@ -109,27 +109,28 @@
           "name": "Mazowieckie"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "5",
-        "ratingCount": "1"
-      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Usługi IT i Graficzne Atomjoy",
         "itemListElement": [
           {
             "@type": "Offer",
-            "price": "1000.00",
+            "price": "2000.00",
             "priceCurrency": "PLN",
             "itemOffered": {
+              "@id": "https://atomjoy.lol#service-webdev",
               "@type": "Service",
               "serviceType": "Web Development",
               "name": "Tworzenie stron internetowych i aplikacji webowych",
-              "description": "Projektowanie i kodowanie szybkich, responsywnych stron internetowych, landing page oraz dedykowanych aplikacji dla biznesu w PHP, Laravel i Vue.",
-              "provider": { "@id": "https://atomjoy.lol#organization" }
+              "description": "Projektowanie i kodowanie szybkich, responsywnych stron internetowych, landing page oraz dedykowanych aplikacji dla biznesu w PHP, Laravel, Inertia, Vue i Tailwind.",
+              "provider": { "@id": "https://atomjoy.lol#organization" },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 5.0,
+                "bestRating": 5,
+                "worstRating": 1,
+                "ratingCount": 1
+              }
             }
           },
           {
@@ -137,6 +138,7 @@
             "price": "500.00",
             "priceCurrency": "PLN",
             "itemOffered": {
+              "@id": "https://atomjoy.lol#service-email",
               "@type": "Service",
               "serviceType": "Email Marketing Services",
               "name": "Kodowanie szablonów email newslettera",
@@ -146,9 +148,10 @@
           },
           {
             "@type": "Offer",
-            "price": "2000.00",
+            "price": "1000.00",
             "priceCurrency": "PLN",
             "itemOffered": {
+              "@id": "https://atomjoy.lol#service-logo",
               "@type": "Service",
               "serviceType": "Graphic Design",
               "name": "Projektowanie logo i identyfikacji wizualnej",
@@ -171,6 +174,7 @@
               }
             },
             "itemOffered": {
+              "@id": "https://atomjoy.lol#service-3d",
               "@type": "Service",
               "serviceType": "3D Modeling",
               "name": "Modelowanie 3D i wizualizacje",
